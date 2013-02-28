@@ -5,7 +5,7 @@ self.onmessage = function(event) {
   n = 1236940;
   primes = [];
 
-  while (primes.length < 5) {
+  while (primes.length < 100) {
     (function() {
       var end, i, _i, _ref;
       n += 1;

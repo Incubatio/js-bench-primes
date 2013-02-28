@@ -5,7 +5,7 @@ self.onmessage = function(event) {
   n = 1236940;
   primes = [];
 
-  search: while(primes.length < 5) {
+  search: while(primes.length < 100) {
     n += 1;
     for (var i = 2; i <= Math.sqrt(n); i += 1) {
       if (n % i == 0) {
