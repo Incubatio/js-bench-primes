@@ -5,7 +5,7 @@ function startTest(hash) {
   worker = new Worker('workers/' +  hash + '.js');
   worker.onmessage = function (event)  {
     end = new Date().getTime();
-    log(end - start, event.data);
+    log(end - start);
   }
 
   startNumber = 1236940;

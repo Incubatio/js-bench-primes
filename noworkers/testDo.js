@@ -7,7 +7,7 @@ foundPrime = false;
 n = 1236940;
 primes = [];
 
-while (primes.length < 100) {
+while (primes.length < 100000) {
   (function() {
     var end, i, _i, _ref;
     n += 1;
@@ -18,7 +18,8 @@ while (primes.length < 100) {
     }
 
     primes.push(n);
-    end = new Date().getTime();
-    log((end - start) + " ms", " => " + n);
   })();
 }
+
+end = new Date().getTime();
+log((end - start) + " ms");

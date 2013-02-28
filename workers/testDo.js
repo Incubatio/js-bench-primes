@@ -5,7 +5,7 @@ self.onmessage = function(event) {
   n = 1236940;
   primes = [];
 
-  while (primes.length < 100) {
+  while (primes.length < 100000) {
     (function() {
       var end, i, _i, _ref;
       n += 1;
@@ -16,7 +16,8 @@ self.onmessage = function(event) {
       }
 
       primes.push(n);
-      self.postMessage(n);
     })();
   }
+
+  self.postMessage();
 }
