@@ -20,5 +20,5 @@ self.onmessage = function(event) {
     })();
   }
 
-  self.postMessage();
+  self.postMessage(0);
 }

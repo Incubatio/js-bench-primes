@@ -18,5 +18,5 @@ self.onmessage = function(event) {
     primes.push(n);
   };
 
-  self.postMessage();
+  self.postMessage(0);
 }
