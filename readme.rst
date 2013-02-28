@@ -17,6 +17,13 @@ DESCRIPTION
 
 The code benched is the computation of the first five number found out of 1236940.
 Browser are tested with and without web workers.
+The cases benched are:
+
+- goto (``test: [...]; continue test``)
+- boolean (``doContinue = false; if(doContinue) continue``)
+- coffeescript "do ->" that use js functionnal paradigm advantage
+
+*NOTE: Please feel free to Correct, Add, Comment the tests.*
 
 
 
@@ -36,7 +43,6 @@ With node:
 
 ``node scriptName.js``
 
-*NOTE: Please feel free to Correct, Add, Comment the tests.*
 
 
 gh-page
