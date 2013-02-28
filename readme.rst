@@ -33,6 +33,8 @@ With node:
 `cd noworker`
 `node scriptName.js`
 
+NOTE: Please feel free to Correct, Add, Comment the tests.
+
 
 gh-page
 ~~~~~~
