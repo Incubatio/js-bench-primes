@@ -5,19 +5,22 @@ self.onmessage = function(event) {
   n = 1236940;
   primes = [];
 
-  while (primes.length < 100000) {
-    (function() {
-      n += 1;
-      sqrtn = Math.sqrt(n);
+  var innerFun = function() {
+    n++;
 
-      for (var i = 2; i <= sqrtn ; i += 1) {
-        if (n % i === 0) {
-          return;
-        }
+    sqrtn = Math.sqrt(n);
+
+    for (var i = 2; i <= sqrtn ; i += 1) {
+      if (n % i === 0) {
+        return;
       }
+    }
 
-      primes.push(n);
-    })();
+    primes.push(n);
+  }
+
+  while (primes.length < 100000) {
+    innerFun();
   }
 
   self.postMessage(0);
