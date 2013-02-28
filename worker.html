@@ -24,6 +24,8 @@
     <br/>
     <div id='menu'> </div>
     <div id='content'> </div>
+    <br/>
+    <p style='font-size:80%'> *Result format: "<i style="font-style:italic">execution-time ms => $prime-number</i>"</p>
 </body>
 </html>
 <script src="worker.js"></script>
@@ -40,7 +42,8 @@
         // ################## Refresh ######################
         refresh = function () { 
           interval = setInterval(function(){
-            if(getHash() !== hash) { window.location.reload(); }
+            //if(getHash() !== hash) { window.location.reload(); }
+            window.location.reload();
             window.clearInterval(interval);
           }, 20);
         }
