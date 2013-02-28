@@ -1,10 +1,11 @@
-var foundPrime, n, primes, start, x;
-if(typeof(log) !== 'function') log = console.log;
+var foundPrime, n, primes, start;
+
+if (typeof(log) !== 'function') log = console.log;
+
 start = new Date().getTime();
 foundPrime = false;
 n = 1236940;
 primes = [];
-x = 10000;
 
 while (primes.length < 5) {
   (function() {
@@ -15,12 +16,9 @@ while (primes.length < 5) {
         return;
       }
     }
-    if (x-- < 0) {
-      primes.push(n);
-      end = new Date().getTime();
-      log((end - start) + " ms", " => " + n);
-      return x = 10000;
-    }
+
+    primes.push(n);
+    end = new Date().getTime();
+    log((end - start) + " ms", " => " + n);
   })();
 }
-

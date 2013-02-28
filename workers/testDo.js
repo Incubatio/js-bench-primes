@@ -1,9 +1,10 @@
 self.onmessage = function(event) {
-  var foundPrime, n, primes, start, x;
+  var foundPrime, n, primes, start;
+
   foundPrime = false;
   n = 1236940;
   primes = [];
-  x = 10000;
+
   while (primes.length < 5) {
     (function() {
       var end, i, _i, _ref;
@@ -13,11 +14,9 @@ self.onmessage = function(event) {
           return;
         }
       }
-      if (x-- < 0) {
-        primes.push(n);
-        self.postMessage(n);
-        return x = 10000;
-      }
+
+      primes.push(n);
+      self.postMessage(n);
     })();
   }
 }
