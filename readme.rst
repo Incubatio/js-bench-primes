@@ -26,20 +26,24 @@ RUN TEST
 Clone repo
 ~~~~~~~~~~
 With browser simply open of the following:
+
 - worker.html
 - noworker.html
 
 With node:
-`cd noworker`
-`node scriptName.js`
 
-NOTE: Please feel free to Correct, Add, Comment the tests.
+```bash
+cd noworker
+node scriptName.js```
+
+*NOTE: Please feel free to Correct, Add, Comment the tests.*
 
 
 gh-page
 ~~~~~~
-http://incubatio.github.com/js-bench-primes/noworker.html
-http://incubatio.github.com/js-bench-primes/worker.html
+
+- http://incubatio.github.com/js-bench-primes/noworker.html
+- http://incubatio.github.com/js-bench-primes/worker.html
 
 
 
@@ -62,6 +66,7 @@ Mac Os 10.7.5
 
 js label statement aka testGoto.js: 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 +----------+-----------+------------+
 | target   | no-worker | with-worker|
 +----------+-----------+------------+
