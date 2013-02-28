@@ -11,7 +11,7 @@ while (primes.length < 100000) {
   foundPrime = false;
   n++;
   sqrtn = Math.sqrt(n);
-  for (i = 2; i <= sqrtn ; i += 1) {
+  for (i = 2; i <= sqrtn; i++) {
     if (n % i === 0) {
       foundPrime = true;
       break;
