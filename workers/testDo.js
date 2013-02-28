@@ -1,5 +1,5 @@
 self.onmessage = function(event) {
-  var foundPrime, n, primes, start;
+  var foundPrime, n, primes, start, sqrtn;
 
   foundPrime = false;
   n = 1236940;
@@ -7,9 +7,10 @@ self.onmessage = function(event) {
 
   while (primes.length < 100000) {
     (function() {
-      var end, i, _i, _ref;
       n += 1;
-      for (i = _i = 2, _ref = Math.sqrt(n); 2 <= _ref ? _i <= _ref : _i >= _ref; i = 2 <= _ref ? ++_i : --_i) {
+      sqrtn = Math.sqrt(n);
+
+      for (var i = 2; i <= sqrtn ; i += 1) {
         if (n % i === 0) {
           return;
         }

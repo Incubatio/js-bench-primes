@@ -1,4 +1,4 @@
-var foundPrime, n, primes, start;
+var foundPrime, n, primes, start, sqrtn;
 
 if (typeof(log) !== 'function') { log = console.log; }
 
@@ -9,7 +9,9 @@ primes = [];
 
 search: while(primes.length < 100000) {
   n += 1;
-  for (var i = 2; i <= Math.sqrt(n); i += 1) {
+  sqrtn = Math.sqrt(n);
+
+  for (var i = 2; i <= sqrtn ; i += 1) {
     if (n % i == 0) {
       continue search;
     }
