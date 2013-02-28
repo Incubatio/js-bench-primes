@@ -62,18 +62,23 @@ Mac Os 10.7.5
 
 js label statement aka testGoto.js: 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  node    746  ms
-  firefox 1046 ms  inWorker: 571ms
-  chrome  1089 ms  inWorker: 779ms
+
+- node    746  ms
+- firefox 1046 ms  inWorker: 571ms
+- chrome  1089 ms  inWorker: 779ms
+
 
 using simple boolean aka testBool:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  node     8282 ms
-  firefox  11277 ms inWorker: 6058ms
-  chrome   12850 ms inWorker: 8840ms
+
+- node     8282 ms
+- firefox  11277 ms inWorker: 6058ms
+- chrome   12850 ms inWorker: 8840ms
+
 
 using coffeescript do (functions):
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  node    3376 ms
-  firefox 2225 ms   inWorker: 794ms
-  chrome  3122 ms   inWorker: 2990ms
+
+- node    3376 ms
+- firefox 2225 ms   inWorker: 794ms
+- chrome  3122 ms   inWorker: 2990ms
