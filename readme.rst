@@ -32,9 +32,9 @@ With browser simply open of the following:
 
 With node:
 
-```bash
-cd noworker
-node scriptName.js```
+``cd noworker``
+
+``node scriptName.js``
 
 *NOTE: Please feel free to Correct, Add, Comment the tests.*
 
