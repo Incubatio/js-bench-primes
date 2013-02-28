@@ -1,16 +1,16 @@
 self.onmessage = function(event) {
-  var foundPrime, n, primes, start, sqrtn;
+  var foundPrime, n, primes, start, sqrtn, i;
 
   foundPrime = false;
   n = 1236940;
   primes = [];
 
   search: while(primes.length < 100000) {
-    n += 1;
+    n++;
     sqrtn = Math.sqrt(n);
 
-    for (var i = 2; i <= sqrtn ; i += 1) {
-      if (n % i == 0) {
+    for (i = 2; i <= sqrtn; i++) {
+      if (n % i === 0) {
         continue search;
       }
     }

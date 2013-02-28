@@ -1,4 +1,4 @@
-var foundPrime, n, primes, start, sqrtn;
+var foundPrime, n, i, primes, start, sqrtn, search;
 
 if (typeof(log) !== 'function') log = console.log;
 
@@ -7,12 +7,11 @@ foundPrime = false;
 n = 1236940;
 primes = [];
 
-var innerFun = function() {
+search = function() {
   n++;
 
   sqrtn = Math.sqrt(n);
-
-  for (var i = 2; i <= sqrtn ; i += 1) {
+  for (i = 2; i <= sqrtn ; i += 1) {
     if (n % i === 0) {
       return;
     }
@@ -22,7 +21,7 @@ var innerFun = function() {
 }
 
 while (primes.length < 100000) {
-  innerFun();
+  search();
 }
 
 end = new Date().getTime();
