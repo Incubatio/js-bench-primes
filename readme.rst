@@ -60,7 +60,7 @@ TEST ENVIRONMENT
 Mac Os 10.7.5
 
 - Nodejs v0.8.14
-- Firefox 19.0 
+- Firefox 19.0
 - Chrome 23
 - Lynx 2.8.7 (just kiddin ^^)
 
@@ -70,7 +70,7 @@ Mac Os 10.7.5
 [SPOILER ALERT] TEST RESULTS
 -----------------------------
 
-js label statement aka testGoto.js: 
+js label statement aka testGoto.js:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------+-----------+------------+

@@ -1,22 +1,25 @@
 self.onmessage = function(event) {
-  var foundPrime, n, primes, start, x, doContinue;
+  var foundPrime, n, primes, start, sqrtn;
+
   foundPrime = false;
   n = 1236940;
   primes = [];
-  x = 10000;
-  search: while(primes.length < 5) {
-    doContinue = false
+
+  while (primes.length < 100000) {
+    foundPrime = false;
     n += 1;
-    for (var i = 2; i <= Math.sqrt(n); i += 1) {
+
+    sqrtn = Math.sqrt(n);
+
+    for (var i = 2; i <= sqrtn ; i += 1) {
       if (n % i == 0) {
-        doContinue = true
+        foundPrime = true;
+        break;
       }
     }
-    if(doContinue) continue;
-    if (x-- < 0) {
+    if (!foundPrime)
       primes.push(n);
-      self.postMessage(n);
-      x = 10000;
-     }
   };
+
+  self.postMessage(0);
 }

@@ -25,7 +25,7 @@
     <div id='menu'> </div>
     <div id='content'> </div>
     <br/>
-    <p style='font-size:80%'> *Result format: "<i style="font-style:italic">execution-time ms => $prime-number</i>"</p>
+    <p style='font-size:80%'> *Result format: "<i style="font-style:italic">execution-time ms</i>"</p>
 </body>
 </html>
 <script>
@@ -33,14 +33,14 @@
         examples = ['testGoto', 'testBool', 'testDo']
 
         // ################# Parse Hash ####################
-        getHash = function () { return window.location.href.split('#')[1]; } 
+        getHash = function () { return window.location.href.split('#')[1]; }
         //getHash = function() { return window.location.href.match(/#(.*)$/);}
         hash = getHash();
 
-        content = document ? document.getElementById('content') : false; 
+        content = document ? document.getElementById('content') : false;
 
         // ################## Refresh ######################
-        refresh = function () { 
+        refresh = function () {
           interval = setInterval(function(){
             //if(getHash() !== hash) { content.innerHTML = ""; window.location.reload(); }
             content.innerHTML = "<br/><br/>processing ..."; window.location.reload();
@@ -53,13 +53,13 @@
 
         menu = []
         for(i = 0; i < examples.length; i++) {
-           menu.push('<a onClick="refresh();" href="#' + examples[i] + '">Run ' + examples[i] + '</a>'); 
+           menu.push('<a onClick="refresh();" href="#' + examples[i] + '">Run ' + examples[i] + '</a>');
         }
         out += '<div class="menu"><ul><li>' + menu.join('</li><li>') + '</li></ul></div>';
 
-        function log(time, result) {
-          console.log( time, result);
-          if(content) content.innerHTML += time + result + '<br/>';
+        function log(time) {
+          console.log( time );
+          if(content) content.innerHTML += time + '<br/>';
         }
 
         if(hash !== undefined) {
