@@ -18,9 +18,8 @@ while (primes.length < 100000) {
     }
   }
 
-  if (foundPrime) continue;
-
-  primes.push(n);
+  if (!foundPrime)
+    primes.push(n);
 };
 
 end = new Date().getTime();

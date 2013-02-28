@@ -14,9 +14,8 @@ self.onmessage = function(event) {
         break;
       }
     }
-    if (foundPrime) continue;
-
-    primes.push(n);
+    if (!foundPrime)
+      primes.push(n);
   };
 
   self.postMessage();
