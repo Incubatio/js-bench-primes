@@ -3,27 +3,29 @@ Prime Number js Benchmark
 =========================
 
 
-
 PROBLEM
 -------
 
-Coffeescript does not support label statement on continue break, more known as "goto"
-When I ported my simple-worker example from gamejs to gamecs I noted a consequent loss in performances.
-
-
+Coffeescript does not support label statement on continue or break, more widely known as "goto".
+A first issue could concern performance, some operation execution could have some consequent change.
 
 DESCRIPTION
 -----------
 
-The code benched is the computation of the first five number found out of 1236940.
+At the moment we just have benched the computation of finding 10 000 prime out of 1236940.
+If there are other tests that could test our "problematic" more properly, I invite you to contribute :). 
+
+Node is tested.
 Browser are tested with and without web workers.
 The cases benched are:
 
-- goto (``test: [...]; continue test``)
-- boolean (``doContinue = false; if(doContinue) continue``)
-- coffeescript "do ->" that use js functionnal paradigm advantage
+- goto (``test: [...] if(someCondition) continue test``)
+- boolean (``doContinue = false; if(someCondition) doContinue = true; if(doContinue) continue``)
+- function (``test = function() { if(someConditions) return }``)
 
-*NOTE: Please feel free to Correct, Add, Comment the tests.*
+*Note: CoffeeScript "do => " is not an alternative to advise as long as it allocate a new anonymous 
+function which is costfull in a looping context.*
+
 
 
 
@@ -110,3 +112,14 @@ Node
 +------------+---------------+
 | function   | 1997 ms       |
 +------------+---------------+
+
+TODO
+~~~~
+
+- Repeat test x time to make result more accurate
+
+
+Contributors
+------------
+
+Álvaro Cuesta
