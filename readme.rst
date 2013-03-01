@@ -13,7 +13,7 @@ DESCRIPTION
 -----------
 
 At the moment we just have benched the computation of finding 10 000 prime out of 1236940.
-If there are other tests that could test our "problematic" more properly, I invite you to contribute :). 
+In the test the calculation of prime number requires two nested loop.
 
 Node is tested.
 Browser are tested with and without web workers.
@@ -23,6 +23,7 @@ The cases benched are:
 - boolean (``doContinue = false; if(someCondition) doContinue = true; if(doContinue) continue``)
 - function (``test = function() { if(someConditions) return }``)
 
+If there are other tests that could test our "problematic" more properly, I invite you to contribute :). 
 *Note: CoffeeScript "do => " is not an alternative to advise as long as it allocate a new anonymous 
 function which is costfull in a looping context.*
 
@@ -114,8 +115,9 @@ Node
 +------------+---------------+
 
 TODO
-~~~~
+-----
 
+- find and code a test case with more than two nested loops (That would be a more realistic way to test goto tradeoff)
 - Repeat test x time to make result more accurate
 
 
