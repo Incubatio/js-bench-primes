@@ -18,13 +18,13 @@
     </style>
 </head>
 <body>
-    <header><h3> Compute the 5 first prime number out of 1236940</h3></header>
+    <header><h3> Compute 10 000 primes out of 1236940</h3></header>
     <big>Worker = TRUE</big> &nbsp;<a style="font-style:italic" href="./noworker.html">Click here to run tests without worker</a>
     <br/>
     <br/>
     <div id='menu'> </div>
+    <br />
     <div id='content'> </div>
-    <br/>
     <p style='font-size:80%'> *Result format: "<i style="font-style:italic">execution-time ms</i>"</p>
 </body>
 </html>
@@ -62,7 +62,7 @@
         content = document ? document.getElementById('content') : false;
         function log(time) {
           console.log( time + ' ms' );
-          if(content) content.innerHTML += time + '<br/>';
+          if(content) content.innerHTML += time + ' ms<br/>';
         }
 
         window.onload = function () {
